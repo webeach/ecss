@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ecss.webea.ch/schema/v0.1/ecss.config.json",
+  "title": "ECSS Configuration",
+  "description": "Configuration file for ECSS (ecss.config.json)",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "classAttribute": {
+      "type": "string",
+      "enum": ["className", "class", "both"],
+      "default": "className",
+      "description": "Which class attribute key to include in the object returned by style factories. Use 'className' for React, 'class' for Vue / Svelte / SolidJS, 'both' for universal components."
+    },
+    "classTemplate": {
+      "type": "string",
+      "default": "[name]-[hash:6]",
+      "description": "Template for generated CSS class names. Supports [name] (the @state-def identifier) and [hash:N] (first N characters of the SHA-256 hash of filePath + name) tokens."
+    },
+    "generateDeclarations": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, the plugin writes a .ecss.d.ts declaration file alongside each .ecss source file. Recommended for Svelte projects and any setup where the TypeScript Language Service Plugin is unavailable."
+    }
+  }
+}

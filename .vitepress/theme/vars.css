@@ -1,0 +1,17 @@
+.VPHero .image-container {
+  transform: none !important;
+}
+
+:root {
+  --vp-c-brand-1: #a440a4;
+  --vp-c-brand-2: #c856c6;
+  --vp-c-brand-3: #d970d7;
+  --vp-c-brand-soft: rgba(164, 64, 164, 0.14);
+}
+
+.dark {
+  --vp-c-brand-1: #c856c6;
+  --vp-c-brand-2: #d970d7;
+  --vp-c-brand-3: #a440a4;
+  --vp-c-brand-soft: rgba(200, 86, 198, 0.16);
+}
